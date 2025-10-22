@@ -1,40 +1,41 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <!-- PATITO MUERTITO -->
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Comandos básicos de Git — Guía dinámica</title>
   <style>
     :root{
       --bg:#0f172a;          /* slate-900 */
-      --panel:#111827;       /* gray-900 */
+      --panel:#111827;        /* gray-900 */
       --card:#0b1220;        /* custom dark */
       --text:#e5e7eb;        /* gray-200 */
-      --muted:#9ca3af;       /* gray-400 */
-      --brand:#22d3ee;       /* cyan-400 */
+      --muted:#9ca3af;        /* gray-400 */
+      --brand:#22d3ee;        /* cyan-400 */
       --accent:#34d399;      /* emerald-400 */
       --border:#1f2937;      /* gray-800 */
       --code-bg:#0b1220;
       --chip:#111827;
     }
     :root.light{
-      --bg:#f8fafc;         /* slate-50 */
-      --panel:#ffffff;       /* white */
+      --bg:#f8fafc;        /* slate-50 */
+      --panel:#ffffff;        /* white */
       --card:#ffffff;
       --text:#0f172a;        /* slate-900 */
-      --muted:#475569;       /* slate-600 */
-      --brand:#0891b2;       /* cyan-700 */
+      --muted:#475569;        /* slate-600 */
+      --brand:#0891b2;        /* cyan-700 */
       --accent:#059669;      /* emerald-600 */
       --border:#e2e8f0;      /* slate-200 */
-      --code-bg:#0f172a10;   /* faint */
+      --code-bg:#0f172a10;    /* faint */
       --chip:#f1f5f9;        /* slate-100 */
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
+     
+    
       margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),#030712); color:var(--text);
+       background:linear-gradient(180deg,var(--bg),#030712); color:var(--text);
     }
     header{
       position:sticky; top:0; z-index:10; backdrop-filter:saturate(140%) blur(8px);
@@ -87,12 +88,45 @@
 
     footer{max-width:1100px; margin:30px auto; color:var(--muted); padding:0 1rem 2rem}
     .hidden{display:none !important}
+
+    /* Estilos adicionales para la información del estudiante */
+    .student-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px dashed var(--border);
+    }
+    .student-info h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--accent); /* Color llamativo */
+    }
+    .student-info .chip {
+        background: var(--brand);
+        color: var(--panel);
+        font-weight: 700;
+        border: none;
+        padding: .35rem .8rem;
+    }
+    @media (max-width: 600px) {
+        .student-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <div class="h1">
+      
+      <div class="student-info">
+        <h2>Franz Monasterios Condori</h2>
+        <span class="chip">Colaborador</span>
+      </div>
+            <div class="h1">
         <span>📚 Comandos básicos de Git</span>
         <span class="badge">dinámico</span>
       </div>
@@ -124,8 +158,7 @@
         </button>
       </div>
       <div class="chips" id="quick">
-        <!-- chips rápidas -->
-      </div>
+                  </div>
     </div>
   </header>
 
@@ -327,4 +360,3 @@
   </script>
 </body>
 </html>
-
